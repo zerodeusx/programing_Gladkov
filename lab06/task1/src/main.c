@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-#define LEN 15
+//Defining our length
+#define LEN 15                  
 
 int main() {
     char zap = '_';					//For filling
@@ -35,12 +36,14 @@ int main() {
     }
 
     for (int i = (halfLenZap + lenIn); i < LEN - 1; i++) {			//Putting in the end fills
-    strResult[i] = zap;
+        strResult[i] = zap;
     }
 
     strResult[LEN] = '\0';											//Task requirement
+    if (lenIn % 2 == 1){
+        strResult[LEN - 2] = '\0';
+    }
 
     return 0;
-
 
 }
