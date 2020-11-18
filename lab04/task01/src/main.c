@@ -4,9 +4,7 @@
 
 int main()
 {
-    char l = "l";           //chars required for choice
-    char s = "s";
-    char v = "v";
+    char choice = 'l';           //chars required for choice
 
     float l_math;           //All math variables
     float s_math;
@@ -14,8 +12,6 @@ int main()
     float R2;               //R**2
     float R3;               //R**3
 
-    char choice;
-    choice = v;             //choosing our result 
 
     R2 = R*R;
     R3 = R2*R;
@@ -29,13 +25,13 @@ int main()
 
 
     //If statement for different choice
-    if ( choice  == l ){    
+    if ( choice  == 'l' ){
         l_math = 2*Pi*R;
     }
-    else if ( choice  == s ){
+    else if ( choice  == 's' ){
         s_math = Pi*R2;
     }
-    else if ( choice  == v ){
+    else if ( choice  == 'v' ){
         v_math = 4/3*Pi*R3;
     }
     else {

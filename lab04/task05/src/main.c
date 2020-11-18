@@ -1,35 +1,31 @@
 #include <stdio.h>
 
 int main() {
-    int X = 0;	//Correct this for result					
-    int y;
 
-    if (X== 3) {                    //Just giving Y the value with the help of the graph 
-        y=2;
-    }
+    float x = 1.2;  //x value
+    float y;        //y value   
 
-    else if (X == 2) {             
-        y=1;
 
+    //Using our graph to find out Y if X < = -1
+    if (X <= -1) {
+    y = -X -1;      
     }
 
-    else if (X == 1) {              
-        y=0;
+    //Using our graph to find out Y if X > -1 and X < = 0
+    if (X > -1 && X <= 0) {
+    y = X + 1; 
     }
-    else if (X == 0) {               
-        y=1;
+
+    //Using our graph to find out Y if X > 0 and X < 1   
+    if (X > 0 && X < 1) {
+    y = -X + 1; 
     }
-    else if (X == -1) {          
-        y=0;
-    }
-    else if (X == -2) {              
-        y=1;
-    }
-    else if (X == -3) {         
-        y=2;
-    }
-    else{                           //Test
+
+    //Using our graph to find out Y if X >= 0
+    if (X >= 1) {
+    y = X - 1; 
     }
 
     return 0;
+
 }

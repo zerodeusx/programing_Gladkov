@@ -18,8 +18,7 @@ int main()
     int sum1 = 0;
     int sum2 = 0;
     int remainder;
-    int lucky = 1;
-    int unlucky = 0;
+    int lucky;
 
     for (i = 0; i <= 12; i++) {     //Getting the length
         num_copy/=10;
@@ -69,14 +68,14 @@ int main()
     }
 
 
-    if (sum1==sum2 && len % 2 == 0){    //Finding out if its a lucky number or not and printing it out
-        lucky;
+    if (sum1==sum2 && len % 2 == 0){    //Finding out if its a lucky number or not 
+        lucky = 1;      //true
     }
     else if (sum1 != sum2 && len % 2 == 0) {
-        unlucky;
+        lucky = 0;  //false
     }
     else if (len == 1){
-        unlucky;
+        lucky = 0;  //false
     }
 
 

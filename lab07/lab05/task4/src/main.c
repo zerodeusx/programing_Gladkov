@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int PerfectNumber(int function_num);          
+int PerfectNumber(int function_num);
 
 int main(){
 
@@ -29,24 +29,36 @@ int main(){
     int num1 = rand() % range_for_rand + min_number_of_range;
 
     //Potential lucky number N2
-    int num2 = rand() % range_for_rand + min_number_of_range;            
+    int num2 = rand() % range_for_rand + min_number_of_range;
+    
 
     int result1 = PerfectNumber(num1);
     int result2 = PerfectNumber(num2);
-
+    
     return 0;
 }
 
 int PerfectNumber(int function_num){
 
-    int i;          
-    int sum = 0;    //Declaring sum
+    int i;
+    int sum_of_dividers = 0;       //Initializing sum
 
-    for(i = 1; i <= function_num; i++) {     //Getting all the i values which suit us and summing them in the sum
-        if((function_num%i) == 0){
-            sum += i;
+    int perfect;
+
+
+    for (i = 1; i < function_num; i++) {
+        if (function_num % i == 0) {
+            sum_of_dividers += i; //Getting all the i values which suit us and summing them in the result
         }
     }
-    return sum;
+
+    if (sum_of_dividers == function_num){
+        perfect = 1; //true
+    }
+    else{
+        perfect = 0; //false
+    }
+    
+    return perfect;
 
 }
