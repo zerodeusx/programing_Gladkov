@@ -27,7 +27,7 @@ int main()
             len++;
         }
         else {
-            unlucky;
+            lucky = 0;
         }
 
     }
@@ -36,7 +36,7 @@ int main()
         half_len = len/2;           //Getting the half, if length suits us
     }
     else{
-        unlucky;
+        lucky = 0;
     }
 
     for (i=1; i < half_len; i++) {  //Getting the for_division variable we need
@@ -72,11 +72,12 @@ int main()
         lucky = 1;      //true
     }
     else if (sum1 != sum2 && len % 2 == 0) {
-        lucky = 0;  //false
+        lucky = 0;      //false
     }
     else if (len == 1){
-        lucky = 0;  //false
+        lucky = 0;      //false
     }
+
 
 
     return 0;

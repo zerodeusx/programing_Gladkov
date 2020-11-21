@@ -6,38 +6,26 @@ int main()
 {
     char choice = 'l';           //chars required for choice
 
-    float l_math;           //All math variables
-    float s_math;
-    float v_math;
     float R2;               //R**2
     float R3;               //R**3
-
-
+    float result;
+    
     R2 = R*R;
     R3 = R2*R;
+    
 
-    l_math = 2*Pi*R;        //Formula  =  2 * Pi * R
-
-    s_math = Pi*R2;         //Formula  = Pi * R**2
-
-    v_math = 4/3*Pi*R3;     //Foruma  =  4/3 * Pi * R**3
-
-
-
-    //If statement for different choice
-    if ( choice  == 'l' ){
-        l_math = 2*Pi*R;
-    }
-    else if ( choice  == 's' ){
-        s_math = Pi*R2;
-    }
-    else if ( choice  == 'v' ){
-        v_math = 4/3*Pi*R3;
-    }
-    else {
+    switch (choice){
+        case 'l':
+            result = 2*Pi*R;
+            break;
+        case 's':
+            result = Pi*R2;
+            break;
+        case 'v':
+            result = 4/3*Pi*R3;
+            break;
 
     }
-
 
     return 0;
 }
