@@ -29,11 +29,23 @@ int main(){
     int n1_1 = rand() % range_for_rand + min_number_of_range;
     int n1_2 = rand() % range_for_rand + min_number_of_range;
 
+    if (n1_1 > n1_2){
+        int temp = n1_2;
+        n1_2 = n1_1;
+        n1_1 = temp;
+    }
+
     int result1 = CommonDivisor(n1_1,n1_2);
 
     //Random numbers for division V2
     int n2_1 = rand() % range_for_rand + min_number_of_range;
     int n2_2 = rand() % range_for_rand + min_number_of_range;
+
+    if (n1_1 > n1_2){
+        int temp = n2_2;
+        n2_2 = n2_1;
+        n2_1 = temp;
+    }
 
     int result2 = CommonDivisor(n2_1,n2_2);
 
@@ -43,25 +55,16 @@ int main(){
 int CommonDivisor (int n1, int n2){
 
     int i;
-    int common_div;
+    int div;
 
-    int x = 1;
-
-    do{ //do-while loop
-
-        x++;
-
-        for(i=1; i <= n1 && i <= n2; ++i)
-        {
-            //Finds the common divisor
-            if(n1%i==0 && n2%i==0)
-                common_div = i;
+    for(i = 1; i <= n1 && i <= n2; ++i){
+        //Finds the common divisor
+        if(n1%i==0 && n2%i==0){
+            div = i;
         }
 
-
     }
-    while ( x < 2);
-
-    return common_div;
+    
+    return div;
 
 }

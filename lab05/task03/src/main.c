@@ -17,8 +17,14 @@ int main()
     int v;                          //All those vars are used to get the sum of the parts
     int sum1 = 0;
     int sum2 = 0;
+    int sum1_2 = 0;
+    int sum2_2 = 0;
+    int sum1_3 = 0;
+    int sum2_3 = 0;
     int remainder;
     int lucky;
+    int lucky2;
+    int lucky3;
 
     for (i = 0; i <= 12; i++) {     //Getting the length
         num_copy/=10;
@@ -54,7 +60,7 @@ int main()
     while (v != 0)                  //Getting the sum of first part
     {
         remainder = v % 10;
-        sum1       = sum1 + remainder;
+        sum1      = sum1 + remainder;
         v         = v / 10;
     }
 
@@ -63,12 +69,12 @@ int main()
     while (v != 0)                  //Getting the sum of second part
     {
         remainder = v % 10;
-        sum2 = sum2 + remainder;
-        v = v / 10;
+        sum2      = sum2 + remainder;
+        v         = v / 10;
     }
 
 
-    if (sum1==sum2 && len % 2 == 0){    //Finding out if its a lucky number or not 
+    if (sum1==sum2 && len % 2 == 0){    //Finding out if its a lucky number or not
         lucky = 1;      //true
     }
     else if (sum1 != sum2 && len % 2 == 0) {
@@ -79,6 +85,65 @@ int main()
     }
 
 
+
+
+
+    for ( i = 0; ; i++){
+        remainder = v % 10;
+        sum1      = sum1 + remainder;
+        v         = v / 10;
+        if (v == 0){
+            break;
+        }
+    }
+    for ( i = 0; ; i++){
+        remainder = v % 10;
+        sum2_2      = sum2_2 + remainder;
+        v         = v / 10;
+        if (v == 0){
+            break;
+        }
+    }
+
+    if (sum1_2==sum2_2 && len % 2 == 0){    //Finding out if its a lucky number or not
+        lucky2 = 1;      //true
+    }
+    else if (sum1_2 != sum2_2 && len % 2 == 0) {
+        lucky2 = 0;      //false
+    }
+    else if (len == 1){
+        lucky2 = 0;      //false
+    }
+
+
+
+
+
+    do {
+        remainder = v % 10;
+        sum1_3    = sum1_3 + remainder;
+        v         = v / 10;
+    }
+    while(v != 0);
+
+
+    do {
+        remainder = v % 10;
+        sum2_3    = sum2_3 + remainder;
+        v         = v / 10;
+    }
+    while(v != 0);
+
+
+    if (sum1_3==sum2_3 && len % 2 == 0){    //Finding out if its a lucky number or not
+        lucky3 = 1;      //true
+    }
+    else if (sum1_3 != sum2_3 && len % 2 == 0) {
+        lucky3 = 0;      //false
+    }
+    else if (len == 1){
+        lucky3 = 0;      //false
+    }
 
     return 0;
 }
