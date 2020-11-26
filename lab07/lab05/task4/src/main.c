@@ -10,7 +10,7 @@ int main(){
     srand(time(NULL));
 
     int x = 0;
-    int y = 900000;
+    int y = 9000;
 
     int range_for_rand;
     int min_number_of_range;
