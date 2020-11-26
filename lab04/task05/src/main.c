@@ -2,7 +2,7 @@
 
 int main() {
 
-    float x = 1.2;  //x value
+    float X = 1.2;  //x value
     float y;        //y value   
 
 
