@@ -1,9 +1,46 @@
+/**
+ * @mainpage
+ * # Загальне завдання
+ * 1. **Переробити** програми, що були розроблені під час виконання лабораторних робіт з тем "Масиви" та "Цикли" таким чином, щоб 
+ * використовувалися функції для обчислення результату.
+ * 2. **Реалізувати** функцію, яка перетворює задане число у рядок
+ *
+ * @author Gladkov K.
+ * @date 08-dec-2020
+ * @version 1.0
+ */
+
+/**
+ * @file main.c
+ * @brief запис в масив всіх отриманих розрядів і чисел за допомогою знаходження їх значення
+ *
+ */
+ 
+ 
+/**
+ * Головна функція.
+ 
+ * Послідовність дій:
+ * {@link arr[50]}
+ * - заповнення результуючого масиву за допомогою функції
+ * - {@link num_converter(arr, numIn)}
+ * - виклик функції для генерування псевдовипадкових чисел 
+ * - генерування заданого числа 
+ * - заповнення заданого масиву
+ * 
+ * {@link copyOne} функція заповнює результуючий масив
+ *
+ * {@link copyNum} запис числа
+ *
+ * {@link num_converter} запис розряду числа
+ * 
+ */ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 
-int copyOne(char numAsString[], int iStart, char numStr[], int size) {
+int copyOne(char numAsString[], int iStart, char numStr[], int size) {/** < масив переписує розряд або чіслiвнік в наш результуючий масив */
     for (int t = 0; t < size; t++) {
         numAsString[iStart] = numStr[t];
         iStart++;
@@ -11,7 +48,7 @@ int copyOne(char numAsString[], int iStart, char numStr[], int size) {
     return iStart;
 }
 
-int copyNum(int num, char numAsString[], int iStart) {
+int copyNum(int num, char numAsString[], int iStart) { /** < записуємо в результуючий масив потрібні на елементи в залежності від значення числа */
     char one[3] = {'o','n','e'};
     char two[3] = {'t','w','o'};
     char three[5] = {'t','h','r','e','e'};
@@ -54,7 +91,7 @@ int copyNum(int num, char numAsString[], int iStart) {
 }
 
 
-void num_converter(char numAsString[], int num) {
+void num_converter(char numAsString[], int num) {/** < Заповнюємо масив розрядами чисел */
 
     int NUM = num;
     short size = 0;
@@ -64,7 +101,7 @@ void num_converter(char numAsString[], int num) {
     char decade[8] = {' ','d','e','c','a','d','e',' '};
     int cond = 0;
 
-    for (int i = 10000; i > 0; i /= 10) {
+    for (int i = 10000; i > 0; i /= 10) { /** < тут визначається розряд числа */
         if (num > 0) {
             cond = num % i;
             if (cond != num) {
@@ -107,7 +144,7 @@ void num_converter(char numAsString[], int num) {
 }
 
 int main() {
-    char arr[50] = {0};
+    char arr[50] = {0}; /*цей масив змінюється і в нього записується все*/
 
     int x = 0;
     int y = 10000;
