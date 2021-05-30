@@ -1,8 +1,14 @@
-//
-// Created by blank on 3/1/21.
-//
-
+/**
+ * @file lib.c
+ * @brief Файл з реалізацією функцій
+ *
+ *
+ * @author Gladkov K.
+ * @date 11-jan-2020
+ * @version 1.0
+ */
 #include "lib.h"
+
 
 char* insert(char* mass, char* mass2, int index) {
 
@@ -27,7 +33,6 @@ char* insert(char* mass, char* mass2, int index) {
 
     return s;
 }
-
 void reduce(char *mass, int indexStart,int indexEnd) {
 
     int size = strlen(mass) - (indexEnd - indexStart + 1);

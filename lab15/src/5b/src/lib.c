@@ -1,5 +1,15 @@
 #include "lib.h"
 
+/**
+ * @file lib.c
+ * @brief Файл з реалізацією функцій
+ *
+ *
+ * @author Gladkov K.
+ * @date 11-jan-2021
+ * @version 1.0
+ */
+
 void agency_writer(struct Agency* agency, int size){
 
     for (int i = 0; i < size; i++){

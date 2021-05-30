@@ -1,3 +1,21 @@
+/**
+ * @mainpage
+ * # Загальне завдання
+ * 1. **Зробити** функцию зи ставкою в рядок, виделенням, також використовувати memcpy i memset
+ *
+ * @author Gladkov K.
+ * @date 11-jan-2021
+ * @version 1.0
+ */
+
+/**
+* @file main.c
+* @brief Файл з main, який також викликае функцii
+*
+* @author Gladkov K.
+* @date 11-jan-2020
+* @version 1.0
+*/
 #include "lib.h"
 
 int main() {

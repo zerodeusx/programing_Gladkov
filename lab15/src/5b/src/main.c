@@ -1,5 +1,25 @@
 #include "lib.h"
 
+/**
+ * @mainpage
+ * # Загальне завдання
+ * 1. **Зробити** динамичний список (двонаправленний)
+ *
+ *
+ * @author Gladkov K.
+ * @date 11-jan-2020
+ * @version 1.0
+ */
+
+/**
+* @file main.c
+* @brief Файл з main, який також викликае функцii
+*
+* @author Gladkov K.
+* @date 11-jan-2021
+* @version
+*/
+
 int main() {
 
     int amount_of_structs = struct_amount();
